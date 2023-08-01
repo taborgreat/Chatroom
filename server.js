@@ -15,10 +15,6 @@ app.use(
   })
 );
 
-const userData = {
-  name: "tabor",
-};
-
 const chatMessage = require("./models/chatMessage");
 const profile = require("./models/profile");
 
@@ -176,6 +172,10 @@ app.post("/submitMessage", (req, res) => {
     });
 });
 
+
+app.get('/profile', (req,res) => {
+  res.render("profile");
+})
 
 
 
